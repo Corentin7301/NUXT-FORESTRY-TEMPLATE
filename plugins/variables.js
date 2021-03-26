@@ -1,4 +1,4 @@
-import global from "@/blog.config.json"
+import global from "@/site.config.json"
 
 export default ({ app }, inject) => {
   inject('global', global)

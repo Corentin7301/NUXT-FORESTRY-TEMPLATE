@@ -1,26 +1,24 @@
----
-    # MAKE TITLE OF ARTICLE
-title: DOCUMENTATION
-    # MAKE DESCRIPTION OF ARTICLE
-description: DOCUMENTATION of NUXT-BLOG-TEMPLATE by Corentin PERROUX
-    # MAKE URL OF ILLUSTRATION IMAGE
-urlImage: https://madewithnetwork.ams3.cdn.digitaloceanspaces.com/spatie-space-production/3075/nuxtjs-2.jpg
-
----
-
-# NUXT BLOG TEMPLATE
+# NUXT FORESTRY TEMPLATE
 
 ## Made by [Corentin PERROUX](https://github.com/Corentin7301)
 
 ## DEPLOY ON NETLIFY :
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/Corentin7301/NUXT-BLOG-TEMPLATE"><img src="https://camo.githubusercontent.com/417d890ba67c98ad5856b715343a61cdbf07d72b9bd5b79dd45d43de634c29ea/68747470733a2f2f7777772e6e65746c6966792e636f6d2f696d672f6465706c6f792f627574746f6e2e737667" alt="netlify deploy button"></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/Corentin7301/NUXT-FORESTRY-TEMPLATE"><img src="https://camo.githubusercontent.com/417d890ba67c98ad5856b715343a61cdbf07d72b9bd5b79dd45d43de634c29ea/68747470733a2f2f7777772e6e65746c6966792e636f6d2f696d672f6465706c6f792f627574746f6e2e737667" alt="netlify deploy button"></a>
 
-**Si le repository créé est vide utilisez le bouton "Use this template" de Github.**
+**Si le repository créé est vide utilisez le bouton "Use this template" de Github. Si vous préférez importer le projet sur Forestry, utilisez le buton ci-dessous.**
 
-If the created repository is empty use the "Use this template" button of Github.
+If the created repository is empty use the "Use this template" button of Github. If you prefer to import the project to Forestry, use the button below.
 
-## REPO-NAME: https://github.com/Corentin7301/NUXT-BLOG-TEMPLATE
+## DEPLOY ON FORESTRY :
+
+**Si vous avez déjà utilisé le bouton "Deploy to Netlify" et que le repository créé n'est pas vide, n'utilisez pas ce bouton.**
+
+If you have already used the "Deploy to Netlify" button and the created repository is not empty, do not use this button.
+
+[![Import this project into Forestry](https://assets.forestry.io/import-to-forestry.svg)](https://app.forestry.io/quick-start?repo=corentin7301/nuxt-forestry-template&engine=other&branch=main)
+
+## REPO-NAME: https://github.com/Corentin7301/NUXT-FORESTRY-TEMPLATE
 
 *********
 ## Français :
@@ -30,25 +28,21 @@ If the created repository is empty use the "Use this template" button of Github.
 
 ## Personnalisation
 
-Modifiez les données dans le fichier **/blog.config.json** :
+Modifiez les données dans le fichier **/site.config.json** :
 
-* #### **siteUrl** : Nom de domaine du site. Exemple : "https://blog-template.fr"
+* #### **siteUrl** : Nom de domaine du site. Exemple : "https://nuxt-forestry-template.fr"
 
 Il apparaîtra dans la **configuration du feed**, **les metadonnées du site**, **l'url canonique** et la **configuration du sitemap**.
 
-* #### **siteName** : Nom du site. Exemple : "NUXT-BLOG-TEMPLATE"
+* #### **siteName** : Nom du site. Exemple : "NUXT-FORESTRY-TEMPLATE"
 
 Il apparaîtra dans les **metadonnées du site et de la page index** et la **balise alt de l'image de la page "contact"**.
 
-* #### **siteTitle** : Sous titre du site. Exemple : "NUXT-BLOG-TEMPLATE"
+* #### **siteTitle** : Sous titre du site. Exemple : "NUXT-FORESTRY-TEMPLATE"
 
 Il apparaîtra dans le **h2 du header**.
 
-* #### **blogTitle** : Nom de la page blog. Exemple : "BLOG of NUXT-BLOG-TEMPLATE"
-
-Il apparaîtra dans les **metadonnées de la page blog (_page.vue)**.
-
-* #### **contactTitle** : Nom de la page contact. Exemple : "CONTACT of NUXT-BLOG-TEMPLATE"
+* #### **contactTitle** : Nom de la page contact. Exemple : "CONTACT of NUXT-FORESTRY-TEMPLATE"
 
 Il apparaîtra dans les **metadonnées de la page contact**.
 
@@ -64,17 +58,12 @@ Il apparaîtra dans le **feed** et dans le **lien du copyright**.
 
 Il apparaîtra dans le **copyright**.
 
-* #### **siteMetaDescription** : Metadescription du site. Exemple : "NUXT-BLOG-TEMPLATE by Corentin PERROUX"
+* #### **siteMetaDescription** : Metadescription du site. Exemple : "NUXT-FORESTRY-TEMPLATE by Corentin PERROUX"
 
 Il apparaîtra dans les **metadonnées du site** et de **la page index**.
 
 
-* #### **blogMetaDescription** : Metadescription de la page blog. Exemple : "BLOG of NUXT-BLOG-TEMPLATE by Corentin PERROUX"
-
-Il apparaîtra dans **la page blog (_page.vue)**.
-
-
-* #### **contactMetaDescription** : Metadescription de la page contact. Exemple : "CONTACT of NUXT-BLOG-TEMPLATE by Corentin PERROUX"
+* #### **contactMetaDescription** : Metadescription de la page contact. Exemple : "CONTACT of NUXT-FORESTRY-TEMPLATE by Corentin PERROUX"
 
 Il apparaîtra dans **la page contact**.
 
@@ -91,28 +80,19 @@ Il apparaîtra dans la **configuration de la social card de twitter**.
 
 Il apparaîtra dans la **configuration de la social card de twitter**.
 
-* #### **twitterCardImage** : Image de la card Twitter. Exemple : "https://res.cloudinary.com/corentin7301/image/upload/v1615799454/blog-template/nuxt-blog-template_i25n41.jpg"
+* #### **twitterCardImage** : Image de la card Twitter. Exemple : "https://res.cloudinary.com/corentin7301/image/upload/v1616753941/nuxt-forestry-template/nuxt-forestry-template_gpfj1c.jpg"
 
 Il apparaîtra dans la **configuration de la social card de twitter**.
 
-* #### **mainImage** : Image principale du site. Exemple : "https://res.cloudinary.com/corentin7301/image/upload/v1615799454/blog-template/nuxt-blog-template_i25n41.jpg"
+<!-- * #### **mainImage** : Image principale du site. Exemple : "https://res.cloudinary.com/corentin7301/image/upload/v1616753941/nuxt-forestry-template/nuxt-forestry-template_gpfj1c.jpg"
 
-Il apparaîtra dans la **configuration des cards de partage social**, dans **la page contact** et dans **la page index**.
+Il apparaîtra dans la **configuration des cards de partage social**, dans **la page contact** et dans **la page index**. -->
 
 * #### **siteType** : Type de site. Exemple : "website"
 
 **Si vous ne le connaissez pas, laissez "website".**
 
 Il apparaîtra dans la **configuration des cards de partage social**.
-
-
-* #### **blog.articleCountPerPage** : Nombre d'article sur chaque pages dans l'onglet blog (_page.vue). Exemple : "9"
-
-Il est utilisé dans la **page ArticleList.vue**, **ArticlePagination.vue** et dans **getContent.js**.
-
-* #### **blog.displayNumberOfArticles** : Affichage du nombre d'articles total dans l'onglet blog (_page.vue). **true** = Afficher | **false** = NE PAS afficher.
-
-Il est utilisé dans la **page _page.vue**.
 
 * #### **style.colors.primaryColor** : Couleur principale du site. EN HEXADECIMAL Exemple : #41b883.
 
@@ -129,41 +109,35 @@ Il est utilisé dans la **page _page.vue**.
 
 ## Contenu :
 
-## Ecrire un article :
+## Modifier une page :
 
 * ### Avec les fichiers .md :
 
-**DANS LE DOSSIER /content/articles**
+**DANS LE DOSSIER /content/pages**
 
   * Ecrire selon la [syntaxe Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
   * Commencer par un frontmatter comprenant :
 
 
-    * **title**: Nom de l'article. Exemple : NUXT-BLOG-TEMPLATE 1
+    <!-- * **title**: Nom de l'article. Exemple : NUXT-BLOG-TEMPLATE 1
 
-    * **description**: Description de l'article. Exemple : NUXT-BLOG-TEMPLATE by Corentin PERROUX
+    * **description**: Description de l'article. Exemple : NUXT-BLOG-TEMPLATE by Corentin PERROUX -->
 
-    * **urlImage** : Url de l'image d'illustration de l'article. Exemple : https://madewithnetwork.ams3.cdn.digitaloceanspaces.com/spatie-space-production/3075/nuxtjs-2.jpg
+    * **image** : Url de image principale. Exemple : https://res.cloudinary.com/corentin7301/image/upload/v1616753941/nuxt-forestry-template/nuxt-forestry-template_gpfj1c.jpg
 
-  Il est possible d'en avoir l'exemple dans les fichiers Exemple 1 - 12.
-
-  * Supprimez les fichiers Exemple 1 - 12.
   * Pour sauvegarder les modifications il suffit de "commit" et "push".
 
 * ### Avec Forestry.io :
+
+**Si vous n'avez pas utilisé sur le bouton "Import to Forestry**
 
   * Créer un compte sur le site [Forestry.io](https://forestry.io/).
   * Cliquer sur "Add site".
   * Cliquer sur "Other".
   * Choisir le service d'hébergement du projet.
   * Choisir le repository.
-  * Modifier et ajouter des articles dans l'onglet "Articles" du la sidebar.
-
-
-## Table des matières | Toc
-
-La table des matière fonctionne avec les h2 et les h3 des articles. Elle fonctionne avec un système d'ancre HTML.
+  * Modifier et ajouter des articles dans l'onglet "Pages" du la sidebar.
 
 ## Variables d'environnement
 
@@ -295,25 +269,20 @@ Install node and dependencies : ```npm i```
 
 ## Customization
 
-Change site datas in **/blog.config.json** file.
+Change site datas in **/site.config.json** file.
 
-* #### **siteUrl** : Domain name of site. Example : "https://blog-template.fr"
+* #### **siteUrl** : Domain name of site. Example : "https://nuxt-forestry-template.fr"
 
 It will appear in the **feed configuration**, **site metadatas**, **canonical url** and the **sitemap configuration**.
 
-* #### **siteName** : Site name. Example : "NUXT-BLOG-TEMPLATE"
+* #### **siteName** : Site name. Example : "NUXT-FORESTRY-TEMPLATE"
 
 It will appear in the **Site and index metadatas** and the **alt tag of page "contact" image**.
 
-* #### **siteTitle** : Site subtitle. Example : "NUXT-BLOG-TEMPLATE"
+* #### **siteTitle** : Site subtitle. Example : "NUXT-FORESTRY-TEMPLATE"
 
 It will appear in the **header h2**.
-
-* #### **blogTitle** : Blog page name. Example : "BLOG of NUXT-BLOG-TEMPLATE"
-
-It will appear in the **blog page metadatas (_page.vue)**.
-
-* #### **contactTitle** : Blog page name. Example : "CONTACT of NUXT-BLOG-TEMPLATE"
+* #### **contactTitle** : Contact page name. Example : "CONTACT of NUXT-FORESTRY-TEMPLATE"
 
 It will appear in the **contact page metadatas (_page.vue)**.
 
@@ -329,17 +298,11 @@ It will appear in the **feed** and in the **copyright link**.
 
 It will appear in the **copyright**.
 
-* #### **siteMetaDescription** : Site meta-description. Example : "NUXT-BLOG-TEMPLATE by Corentin PERROUX"
+* #### **siteMetaDescription** : Site meta-description. Example : "NUXT-FORESTRY-TEMPLATE by Corentin PERROUX"
 
 It will appear in the **site metadatas** and the **index page**.
 
-
-* #### **blogMetaDescription** : Blog page meta-description. Example : "BLOG of NUXT-BLOG-TEMPLATE by Corentin PERROUX"
-
-It will appear in **blog page (_page.vue)**.
-
-
-* #### **contactMetaDescription** : Contact page meta-description. Example : "CONTACT of NUXT-BLOG-TEMPLATE by Corentin PERROUX"
+* #### **contactMetaDescription** : Contact page meta-description. Example : "CONTACT of NUXT-FORESTRY-TEMPLATE by Corentin PERROUX"
 
 It will appear in **contact page**.
 
@@ -356,11 +319,11 @@ It will appear in the **twitter social card configuration**.
 
 It will appear in the **twitter social card configuration**.
 
-* #### **twitterCardImage** : Twitter card image. Example : "https://res.cloudinary.com/corentin7301/image/upload/v1615799454/blog-template/nuxt-blog-template_i25n41.jpg"
+* #### **twitterCardImage** : Twitter card image. Example : "https://res.cloudinary.com/corentin7301/image/upload/v1616753941/nuxt-forestry-template/nuxt-forestry-template_gpfj1c.jpg"
 
 It will appear in the **twitter social card configuration**.
 
-* #### **mainImage** : Site main image. Example : "https://res.cloudinary.com/corentin7301/image/upload/v1615799454/blog-template/nuxt-blog-template_i25n41.jpg"
+* #### **mainImage** : Site main image. Example : "https://res.cloudinary.com/corentin7301/image/upload/v1616753941/nuxt-forestry-template/nuxt-forestry-template_gpfj1c.jpg"
 
 It will appear in the **social share cards configuration**, in **contact page** and in **index page**.
 
@@ -370,14 +333,6 @@ It will appear in the **social share cards configuration**, in **contact page** 
 
 It will appear in the **social share cards configuration**.
 
-
-* #### **blog.articleCountPerPage** : Number of article Number of articles on each page in the blog tab (_page.vue). Example : "9"
-
-It will appear in the **ArticleList.vue page**, **ArticlePagination.vue** and in **getContent.js**.
-
-* #### **blog.displayNumberOfArticles** : Display of the total number of articles in the blog tab (_page.vue). true = Display | false = Do NOT display.
-
-It will appear in the **_page.vue page**.
 
 * #### **style.colors.primaryColor** : Main site color. EN HEXADECIMAL Example : #41b883.
 
@@ -392,29 +347,23 @@ It will appear in the **_page.vue page**.
 **To save the modifications, just "commit" and "push".**
 ## Content :
 
-## Write an article :
+## Write an page :
 
 * ### With .md files :
 
-**IN THE /content/articles FOLDER**
+**IN THE /content/pages FOLDER**
 
   * Write according to [Markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
   * Start with a frontmatter including :
 
+    * **image** : Url of the illustration image of the article. Example : https://res.cloudinary.com/corentin7301/image/upload/v1616753941/nuxt-forestry-template/nuxt-forestry-template_gpfj1c.jpg
 
-    * **title**: Article name. Example : NUXT-BLOG-TEMPLATE 1
-
-    * **description**: Article description. Example : NUXT-BLOG-TEMPLATE by Corentin PERROUX
-
-    * **urlImage** : Url of the illustration image of the article. Example : https://madewithnetwork.ams3.cdn.digitaloceanspaces.com/spatie-space-production/3075/nuxtjs-2.jpg
-
-  It's possible to have an example in 1 - 12 Example files.
-
-  * Delete 1 - 12 Example files.
   * To save the modifications, just "commit" and "push".
 
 * ### With Forestry.io :
+
+**If you have not used the button "Import to Forestry**
 
   * Create an account on [Forestry.io](https://forestry.io/) website.
   * Click on "Add site".

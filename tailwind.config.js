@@ -1,4 +1,4 @@
-const global = require("./blog.config.json");
+const global = require("./site.config.json");
 
 module.exports = {
   purge: {

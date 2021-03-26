@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import blogConfig from "@/blog.config.json"
+import blogConfig from "@/site.config.json"
 export default {
   data() {
     return {

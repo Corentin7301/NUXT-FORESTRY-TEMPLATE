@@ -1,6 +1,6 @@
 <template>
   <div class="container p-2.5 flex flex-col items-center">
-    <img :src="this.$global.mainImage" :alt="this.$global.siteName" class=" rounded-xl lg:p-0 lg:items-start">
+    <img :src="this.home.image" :alt="this.$global.siteName" class=" rounded-xl lg:p-0 lg:items-start">
   </div>
 </template>
 
@@ -16,7 +16,15 @@
         content: this.$global.siteMetaDescription
       }],
      }
-    }
+    },
+    async asyncData({
+      $content,
+    }) {
+      const home = await $content('pages', "home").fetch()
+      return {
+        home
+      }
+    },
   }
 
 </script>

@@ -1,4 +1,4 @@
-import global from './blog.config.json'
+import global from './site.config.json'
 
 
 const create = async (feed) => {
