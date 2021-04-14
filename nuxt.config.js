@@ -1,44 +1,8 @@
 import global from './site.config.json'
 
 
-const create = async (feed) => {
-  feed.options = {
-    title: global.siteUrl,
-      // FOR PRODUCTION
-    link: `${global.siteUrl}/feed.xml`,
-      // FOR DEV
-    // link: 'http://localhost:3000/feed.xml',
-    description: global.siteMetaDescription
-  }
-
-  const {
-    $content
-  } = require('@nuxt/content')
-  const posts = await $content('articles').fetch()
-
-  feed.addCategory('Nuxt.js')
-
-  feed.addContributor({
-    name: global.author,
-    email: global.authorEmail,
-    link: global.siteUrl
-  })
-
-  for (const post of posts) {
-
-    feed.addItem({
-      title: post.title,
-      slug: post.slug,
-      description: post.description,
-      link: `${global.siteUrl}/articles/${post.slug}`,
-      content: post.bodyText
-
-    })
-  }
-}
-
 export default {
-  // ssr: false,
+  ssr: false,
   target: 'static',
   head: {
     title: global.siteName,
@@ -177,8 +141,6 @@ export default {
     '@nuxt/content',
     '@nuxtjs/dayjs',
     '@nuxtjs/cloudinary',
-    '@nuxtjs/feed',
-    '@nuxtjs/markdownit',
     'vue-social-sharing/nuxt',
 
 
@@ -186,14 +148,6 @@ export default {
     '@nuxtjs/sitemap',
 
   ],
-
-  feed: [{
-    create,
-    path: '/feed.xml',
-    cacheTime: 1000 * 60 * 15,
-    type: 'rss2',
-    data: ["articles"]
-  }, ],
 
 
 
@@ -204,30 +158,22 @@ export default {
         $content
       } = require('@nuxt/content')
 
-      const articles = await $content('articles').only(['path', 'createdAt']).fetch()
-      const dynamicArticles = articles.map((article) => {
-        return {
-          url: article.path,
-          priority: 1,
-          lastmod: article.createdAt
-        }
-      })
+      // const content = await $content('content').only(['path', 'createdAt']).fetch()
+      // const dynamicArticles = content.map((content) => {
+      //   return {
+      //     url: content.path,
+      //     priority: 1,
+      //     lastmod: content.createdAt
+      //   }
+      // })
       // ADD STATIC PAGES IN SITEMAP HERE
       const staticPages = [
         "/contact",
         // ...
       ]
-      return [...dynamicArticles, ...staticPages]
+      return [...staticPages]
+      // return [...dynamicArticles, ...staticPages]
     },
-  },
-
-
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,
-        // for add div and attributes in md file
-    // use: ['markdown-it-div', 'markdown-it-attrs'],
   },
 
   // CHANGE DATE COUNTRY HERE
@@ -260,18 +206,4 @@ export default {
     name: 'page-transition',
     mode: 'out-in',
   },
-
-  hooks: {
-    'content:file:beforeInsert': (document) => {
-      const md = require('markdown-it')();
-      if (document.extension === '.md') {
-        const { text } = require('reading-time')(document.text)
-  
-        document.readingTime = text
-  
-        const mdToHtml = md.render(document.text)
-        document.bodyText = mdToHtml
-      }
-    }
-  }
 }
