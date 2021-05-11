@@ -1,6 +1,45 @@
 import global from './site.config.json'
 
 
+<<<<<<< HEAD
+=======
+const create = async (feed) => {
+  feed.options = {
+    title: global.siteUrl,
+    // FOR PRODUCTION
+    link: `${global.siteUrl}/feed.xml`,
+    // FOR DEV
+    // link: 'http://localhost:3000/feed.xml',
+    description: global.siteMetaDescription
+  }
+
+  const {
+    $content
+  } = require('@nuxt/content')
+  const posts = await $content('articles').fetch()
+
+  feed.addCategory('Nuxt.js')
+
+  feed.addContributor({
+    name: global.author,
+    email: global.authorEmail,
+    link: global.siteUrl
+  })
+
+  for (const post of posts) {
+
+    feed.addItem({
+      title: post.title,
+      slug: post.slug,
+      description: post.description,
+      link: `${global.siteUrl}/articles/${post.slug}`,
+      content: post.bodyText
+
+    })
+  }
+}
+
+>>>>>>> 25e597c (update nuxt & tailwind dependencies (jit not work))
 export default {
   ssr: false,
   target: 'static',
@@ -116,9 +155,12 @@ export default {
     ]
   },
   css: ['~/assets/css/main.css', '~/assets/css/colors.css', '~/assets/css/utility.css', '~/assets/css/scrollbar.css', '~/assets/css/transition.css', '~/assets/css/tailwind.css'],
-  plugins: [
-    { src: '@/plugins/variables.js' },
-    {src: '@/plugins/Vuelidate'},
+  plugins: [{
+      src: '@/plugins/variables.js'
+    },
+    {
+      src: '@/plugins/Vuelidate'
+    },
   ],
   // auto import des comp.
   components: true,
@@ -135,6 +177,10 @@ export default {
       id: process.env.GOOGLE_ANALYTICS_ID
     },
   },
+
+  // tailwindcss: {
+  //   jit: true
+  // },
 
 
   modules: [
@@ -176,6 +222,18 @@ export default {
     },
   },
 
+<<<<<<< HEAD
+=======
+
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    // for add div and attributes in md file
+    // use: ['markdown-it-div', 'markdown-it-attrs'],
+  },
+
+>>>>>>> 25e597c (update nuxt & tailwind dependencies (jit not work))
   // CHANGE DATE COUNTRY HERE
   dayjs: {
     locales: ['fr'],
@@ -206,4 +264,23 @@ export default {
     name: 'page-transition',
     mode: 'out-in',
   },
+<<<<<<< HEAD
+=======
+
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      const md = require('markdown-it')();
+      if (document.extension === '.md') {
+        const {
+          text
+        } = require('reading-time')(document.text)
+
+        document.readingTime = text
+
+        const mdToHtml = md.render(document.text)
+        document.bodyText = mdToHtml
+      }
+    }
+  }
+>>>>>>> 25e597c (update nuxt & tailwind dependencies (jit not work))
 }
